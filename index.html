@@ -8,21 +8,36 @@
   
   <title>Frontend Mentor | Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
+  <main>
+    <article class="card">
+      <h1 class="advice-label" id="advice-label">Advice</h1>
 
-  "<!-- Advice text goes here -->"
-  
+      <p class="advice-text" id="advice-text" aria-live="polite">Loading advice...</p>
+
+      <!-- Ekran 600px-dən genişdirsə desktop şəkli, əks halda mobil şəkil göstərilir -->
+      <picture>
+        <source media="(min-width: 600px)" srcset="./images/pattern-divider-desktop.svg">
+        <img class="divider" src="./images/pattern-divider-mobile.svg" alt="">
+      </picture>
+
+      <button class="advice-button" id="advice-button" type="button" aria-label="Get new advice">
+        <img src="./images/icon-dice.svg" alt="">
+      </button>
+    </article>
+  </main>
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Wentor0">Wentor0</a>.
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
